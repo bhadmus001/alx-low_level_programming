@@ -7,6 +7,6 @@
  */
 int main(void)
 {
+	printf("Holbert school");
 	return (0);
 }
-
