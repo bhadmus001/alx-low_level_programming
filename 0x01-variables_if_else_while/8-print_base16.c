@@ -3,8 +3,8 @@
  *  main - Entry point
  *  Return: Always success (0)
  */
- int main(void)
- {
+int main(void)
+{
 	char k = '0';
 	char ch = 'a';
 
@@ -19,5 +19,5 @@
 	ch++;
 	}
 	putchar('\n');
-	return (0);	
- }	
+	return (0);
+}
