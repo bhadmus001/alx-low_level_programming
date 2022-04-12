@@ -11,12 +11,3 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
-/**
- * main - Check the code
- * Return: success
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
