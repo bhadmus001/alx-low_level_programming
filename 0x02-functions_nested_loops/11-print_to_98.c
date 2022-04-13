@@ -10,14 +10,7 @@ void print_to_98(int n)
 	{
 		while (n <= 98)
 		{
-		printf("%i", n);
-		if (n != 98)
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		else
-			putchar('\n');
+		printf("%i, ", n);
 		n++;
 		}
 	}
@@ -25,14 +18,7 @@ void print_to_98(int n)
 	{
 		while (n >= 98)
 		{
-		printf("%i", n);
-		if (n != 98)
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		else
-			putchar('\n');
+		printf("%i, ", n);
 		n--;
 		}
 	}
@@ -40,18 +26,12 @@ void print_to_98(int n)
 	{
 		while (n <= 98)
 		{
-		printf("%i", n);
-		if (n != 98)
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		else
-			putchar('\n');
+		printf("%i, ", n);
 		n++;
 		}
 	}
 	else
-		printf("%i\n", n);
+		printf("%i", n);
+	printf("\n");
 
 }

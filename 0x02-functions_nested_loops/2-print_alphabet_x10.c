@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_alphabet_10x - Print the english alphabet 10 times
+ * print_alphabet_x10 - Print the english alphabet 10 times
  */
-void print_alphabet_10x(void)
+void print_alphabet_x10(void)
 {
 	int u = 0;
 	char v;
