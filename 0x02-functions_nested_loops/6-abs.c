@@ -6,6 +6,6 @@
  */
 int _abs(int k)
 {
-	return (k >= 0 ? k : -1(k));
+	return (k >= 0 ? k : -1 * k);
 }
 
