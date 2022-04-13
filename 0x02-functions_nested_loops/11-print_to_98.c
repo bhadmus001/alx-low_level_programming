@@ -16,6 +16,8 @@ void print_to_98(int n)
 		putchar(',');
 		putchar(' ');
 		}
+		else
+			putchar('\n');
 		n++;
 		}
 	}
@@ -29,6 +31,8 @@ void print_to_98(int n)
 		putchar(',');
 		putchar(' ');
 		}
+		else
+			putchar('\n');
 		n--;
 		}
 	}
@@ -42,10 +46,12 @@ void print_to_98(int n)
 		putchar(',');
 		putchar(' ');
 		}
+		else
+			putchar('\n');
 		n++;
 		}
 	}
 	else
-		printf("%i", n);
+		printf("%i\n", n);
 
 }
