@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - Entry point
  * Return: Always 0
@@ -15,7 +16,7 @@ int main(void)
 			c = n % 15;
 		if (c == 0)
 		{
-			printf("FizzBuzz")
+			printf("FizzBuzz");
 		}
 		else if (a == 0)
 		{
