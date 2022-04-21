@@ -13,7 +13,6 @@ char *_strcpy(char *dest, char *src)
 	do {
 		k++;
 		dest[k] = src[k];
-	}
-	while (src[k] != '\0');
+	} while (src[k] != '\0');
 	return (dest);
 }
