@@ -13,7 +13,7 @@ void rev_string(char *s)
 
 		k = 0;
 		middle = length / 2;
-	
+
 	while (middle--)
 	{
 		Hold = s[k];
