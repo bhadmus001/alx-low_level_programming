@@ -18,7 +18,7 @@ char *leet(char *s)
 		{
 			if (s[j] == c[k])
 			{
-				s[j] = c[k];
+				s[j] = d[k];
 			}
 			k++;
 		}
