@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- *  *_strcat - it adds 2 strings together
+ *  *_strncat - it adds 2 strings together
  * @dest: destination
  * @src: source
+ * @n: length to be copied
  * Return: return the concatenated string
  */
 char *_strncat(char *dest, char *src, int n)
