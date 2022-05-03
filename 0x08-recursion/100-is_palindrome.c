@@ -8,7 +8,7 @@ int long_c(char *k)
 {
 	if (*k != '\0')
 	{
-		return (1 + long_c(s + 1));
+		return (1 + long_c(k + 1));
 	}
 	return (0);
 }
