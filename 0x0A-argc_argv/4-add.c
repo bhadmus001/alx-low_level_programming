@@ -1,7 +1,6 @@
 
-
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include "main.h"
 /**
@@ -12,18 +11,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, mul;
+	int i, sum;
 
 	if (argc > 1)
 	{
-		mul = 1;
-		for(i = 1; i < argc; ++i)
+		sum = 0;
+		for (i = 1; i < argc; ++i)
 		{
-			mul *= atoi(argv[i]);
+			if (!(isdigit(argv[i])))
+				printf("Error\n");
+			else
+				sum += atoi(argv[i]);
 		}
-			printf("%d\n", mul);
+			printf("%d\n", sum);
 	}
-	else
-		printf("Error\n");
+	else if (argc == 1)
+		printf("0\n");
 	return (1);
 }
