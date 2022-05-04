@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  *  *_strcat - it adds 2 strings together
  * @dest: destination
