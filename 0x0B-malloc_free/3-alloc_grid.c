@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 		_putchar('\n');
 	}
 		_putchar('\n');
-		free(p)
+		free(p);
 	return (0);
 }
 
