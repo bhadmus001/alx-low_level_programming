@@ -1,5 +1,5 @@
 
-#include "main"
+#include "main.h"
 #include <stdlib.h>
 /**
  * _strdup - create an a space and copy a string given as parameter
