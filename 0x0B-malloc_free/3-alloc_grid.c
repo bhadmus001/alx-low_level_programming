@@ -25,7 +25,8 @@ int **alloc_grid(int width, int height)
 	{
 		for (k = 0; k < width; k++)
 		{
-			p[k] = 0;
+			p[i][k] = 0;
+
 		}
 		_putchar('\n');
 	}
