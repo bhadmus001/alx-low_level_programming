@@ -6,7 +6,7 @@
  * @size: size of memory to allocate
  * Return: a pointer to the memory
  */
-void *_calloc(unsigned in nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p;
 
