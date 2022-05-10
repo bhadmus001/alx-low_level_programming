@@ -9,10 +9,10 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len, i, j;
+	unsigned int len, i, j;
 	char *p;
 
-	for (len = 0; s1[len]; len++)
+	for (len = 0; [len]; len++)
 		;
 	p = malloc(sizeof(*p) * (len + n));
 	if (p == NULL)
