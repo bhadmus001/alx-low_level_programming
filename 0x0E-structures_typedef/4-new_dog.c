@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 /**
  * dog_t *new_dog - creates a new dog profile
  * @name: dog name
@@ -16,7 +16,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	new_d = malloc(sizeof(dog_t));
 		if (new_d == NULL)
-		return (NULL);
+			return (NULL);
 	for (len = 0; name[len]; len++)
 		;
 		new_d->name = malloc(len * sizeof(char));
