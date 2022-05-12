@@ -1,6 +1,36 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
+ * _strlen - calculate the length of string
+ * @str: string to be counted
+ * Return: return the length of string
+ */
+int _strlen(char *str)
+{
+	int len;
+	int count = 0;
+
+	for (len = 0; str[len]; len++)
+		count++;
+	return (count);
+}
+/**
+ * _strcpy - copies a string
+ * @dest: destination
+ * @src: source
+ * Return: pointer to the new string
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i]; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
  * dog_t *new_dog - creates a new dog profile
  * @name: dog name
  * @age: dog's age
@@ -17,28 +47,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_d = malloc(sizeof(dog_t));
 		if (new_d == NULL)
 			return (NULL);
-	for (len = 0; name[len]; len++)
-		;
-	new_d->name = malloc((len + 1) * sizeof(char));
+	new_d->name = malloc((_strlen(name) + 1) * sizeof(char));
 	if (new_d->name == NULL)
 	{
 		free(new_d);
 		return (NULL);
 	}
-	for (i = 0; name[i]; i++)
-		new_d->name[i] = name[i];
 	new_d->age = age;
-	for (len2 = 0; owner[len2]; len2++)
-		;
-	new_d->owner = malloc((len2 + 1) * sizeof(char));
+	new_d->owner = malloc((_strlen(owner) + 1) * sizeof(char));
 	if (new_d->owner == NULL)
 	{
 		free(new_d->name);
 		free(new_d);
 		return (NULL);
 	}
-	for (j = 0; owner[j]; j++)
-		new_d->owner[j] = owner[j];
+	new_d->name = _strcpy(new_d->name, name);
+	new_d->age = age;
+	new_d->owner = _strcpy(new_d->owner, owner);
 	return (new_d);
 	free(new_d);
 }
