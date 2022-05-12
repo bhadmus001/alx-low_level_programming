@@ -4,12 +4,13 @@
 /**
  * print_dog - print out the deatils of dog in struct dog
  * @d: pointer to the details to be printed
+ * Return: nothing
  */
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
-		printf("\n");
+		return;
 	}
 	if (d->name == NULL)
 	{
