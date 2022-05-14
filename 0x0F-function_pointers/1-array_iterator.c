@@ -7,12 +7,12 @@
  * @size: sie of the array
  * @action: funtion pointer
  */
-void array_iterator(int *array, size_t size, void (*action)(int *))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	int i;
 	if (array == NULL)
 		return;
-	if (size == NULL)
+	if (size <= 0)
 		return;
 	if (action == NULL)
 		return;

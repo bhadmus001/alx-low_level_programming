@@ -6,7 +6,7 @@
  * @array: array to perform action on
  * @size: sie of the array
  * @cmp: funtion pointer
- * Return: return the index of an array or -1
+ * Return: return the index of an array or 0
  */
 int int_index(int *array, int  size, int (*cmp)(int))
 {
@@ -15,9 +15,9 @@ int int_index(int *array, int  size, int (*cmp)(int))
 	if (size <= 0)
 		return (-1);
 	if (array == NULL)
-		return;
+		return(0);
 	if (cmp == NULL)
-		return;
+		return(0);
 	for (i = 0; i < size; i++)
 	{
 		cmp(array[i]);
