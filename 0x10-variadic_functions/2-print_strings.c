@@ -1,5 +1,6 @@
 
 #include "variadic_functions.h"
+#include <stdio.h>
 /**
  * print_strings - print strings
  * @separator: a character separates 2 strings
