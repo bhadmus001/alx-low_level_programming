@@ -20,6 +20,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (separator && (i + 1) != n)
 				printf("%s", separator);
 	}
-	printf('\n');
+	printf("\n");
 	va_end(ptr);
 }
