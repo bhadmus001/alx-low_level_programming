@@ -23,12 +23,14 @@ int (*get_op_func(char *s))(int i, int j)
 	i = 0;
 	while (i < 6)
 	{
-		if (atoi(s) == atoi(ops[i]))
+		if (s == ops[i].op)
 		{
-			return (ops[i]);
+			return (ops[i].f);
 		}
+		i++;
 	}
-	return (NULL);
+	/*return (NULL);*/
+	return (0);
 
 }
 
