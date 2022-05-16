@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calc.h"
+#include "3-calc.h"
 /**
  * get_op_func - gets the operator of the operation to be performed
  * @i: 1st number
  * @j: 2nd number
  * @s: 
- * return: 
+ * return:  a null or the function of operation to be performed
  */
 int (*get_op_func(char *s))(int i, int j)
 {
@@ -21,14 +21,15 @@ int (*get_op_func(char *s))(int i, int j)
 	int i;
 
 	i = 0;
-	while ()
+	while (i < 6)
 	{
-		if (s != "+" || s != "-" || s != "*" || s != "/" || s != "%")
+		if (atoi(s) == atoi(ops[i]))
 		{
-			return (NULL);
+			return (ops[i]);
 		}
+	}
+	return (NULL);
 
-	return (op_t ops[i]);
 }
 
 
