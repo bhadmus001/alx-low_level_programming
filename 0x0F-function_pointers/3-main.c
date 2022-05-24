@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	printf("Error\n");
 	exit(99);
 	}
-	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && atoi(op) == 0)
+	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && atoi(argv[3]) == 0)
 	{
 	printf("Error\n");
 	exit(100);
