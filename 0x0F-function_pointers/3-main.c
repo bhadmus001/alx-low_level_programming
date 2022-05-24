@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 /**
  * main - entry point
@@ -9,15 +10,32 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc < 4 || argc > 4)
+	char *op;
+
+	op = argv[2];
+	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
-	if (atoi(argv[2]) == atoi("+") || atoi(argv[2]) == atoi("-") || atoi(argv[2]) == atoi("*") || atoi(argv[2]) == atoi("/") ||atoi(argv[2]) == atoi("%"))
-		{
-			get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
-		}
+	if (
+	(strcmp(op, "+") &&
+	strcmp(op, "-") &&
+	strcmp(op, "*") &&
+	strcmp(op, "/") &&
+	strcmp(op, "%"))
+	)
+	{
+	printf("Error\n");
+	exit(99);
+	}
+	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && atoi(op) == 0)
+	{
+	printf("Error\n");
+	exit(100);
+	}
+
+	printf("%d\n", (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 
 }
