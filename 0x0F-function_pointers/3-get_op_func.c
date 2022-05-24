@@ -4,8 +4,6 @@
 #include "3-calc.h"
 /**
  * get_op_func - gets the operator of the operation to be performed
- * @i: 1st number
- * @j: 2nd number
  * @s: operator
  * Return:  a null or the function of operation to be performed
  */
