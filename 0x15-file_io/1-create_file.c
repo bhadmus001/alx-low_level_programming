@@ -7,10 +7,16 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, count;
+	int fd, count;
 	char *buff;
+	int numb_written;
 
-	buff = malloc(sizeof(char) * text_content)
+	count = 0;
+	while (text_content[count])
+	{
+		count++;
+	}
+	buff = malloc(sizeof(char) * count);
 		if (!buff)
 		return (-1);
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
@@ -18,13 +24,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (!text_content)
 		text_content = "";
-	i = 0;
-	while (text_content[i])
-	{
-		count++;
-		i++;
-	}
-	numb_written = write(fd, text_content, coount);
+	numb_written = write(fd, text_content, count);
 	if (numb_written == -1)
 		return (-1);
 	close(fd);
