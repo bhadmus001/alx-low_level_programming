@@ -13,7 +13,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	table = malloc(sizeof(shash_table_t));
 	if (table == NULL)
 		return (NULL);
-	array = malloc(sizeof(shash_table_t));
+	array = malloc(sizeof(shash_table_t *) * size);
 	if (array == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
